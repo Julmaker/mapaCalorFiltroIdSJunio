@@ -10,7 +10,7 @@ from folium.plugins import HeatMap
 st.title("Mapa de Calor Índices de Soporte Junio 2024 Interactivo")
 
 # Ruta del archivo Excel
-archivo_excel = "/home/makersERJUL/Documentos/ProyectosStreamlite/MapadeCalorJunio.xlsx"
+archivo_excel = "MapadeCalorJunio.xlsx"
 
 # Cargar datos desde el archivo Excel
 df = pd.read_excel(archivo_excel)
