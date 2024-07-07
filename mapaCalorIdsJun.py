@@ -7,7 +7,7 @@ from streamlit_folium import folium_static
 from folium.plugins import HeatMap
 
 # Título de la aplicación
-st.title("Mapa de Calor Índices de Soporte Junio 2024 Interactivo")
+st.title("Mapa de Calor Índices de Soporte Junio 2024")
 
 # Ruta del archivo Excel
 archivo_excel = "MapadeCalorJunio.xlsx"
@@ -16,11 +16,11 @@ archivo_excel = "MapadeCalorJunio.xlsx"
 df = pd.read_excel(archivo_excel)
 
 # Mostrar el DataFrame
-st.write("Datos cargados:", df)
+#st.write("Datos cargados:", df)
 
 # Filtrar por semana
 semanas = ['Todas'] + df['Semana'].unique().tolist()
-semana_seleccionada = st.selectbox("Selecciona una semana", semanas)
+semana_seleccionada = st.selectbox("Filtrar por semana:", semanas)
 
 if semana_seleccionada != 'Todas':
     df_filtrado = df[df['Semana'] == semana_seleccionada]
